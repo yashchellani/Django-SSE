@@ -48,7 +48,6 @@ def event_stream():
         
 
 class PostStreamView(View):
-
     def get(self, request):
         response = StreamingHttpResponse(event_stream())
         response['Content-Type'] = 'text/event-stream'
